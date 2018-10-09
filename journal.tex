@@ -21,108 +21,81 @@
 \maketitle
 \pagenumbering{arabic}
 
-\begin{abstract}
-This is a research journal and may well not require an abstract.
-\end{abstract}
+%\section{Introduction}
+%- Critical Critters
+%	- Wall running
+%	- Static bars
+%	- health bars
+%	- The pause menu and Team Ghost, etc
+%- Genesis
+%	- Adding a modifier
+%	- Hard modelling
+%	- Extruding etc
+%	- Bugs
+%- SpyroEdit
+%	- Texture editing and paletting rules
+%	- Moving objects, etc
+%- PlayStation Assembly Tool
+%- Demiurge
+%	- Pause menu usefulness
+%	- Mouse effectiveness
+%	- Should the crosshair scale?
+%- Audio project with Mango
+%    - Should we use words in the interface, or will unlabelled colours do?
 
-\section{Introduction}
-
-\section{Ask Al}
-Can we use first-person perspective in this journal?
-
-\section{Projects to evaluate}
-- Critical Critters
-	- Wall running
-	- Static bars
-	- health bars
-	- The pause menu and Team Ghost, etc
-- Genesis
-	- Adding a modifier
-	- Hard modelling
-	- Extruding etc
-	- Bugs
-- SpyroEdit
-	- Texture editing and paletting rules
-	- Moving objects, etc
-- PlayStation Assembly Tool
-- Demiurge
-	- Pause menu usefulness
-	- Mouse effectiveness
-	- Should the crosshair scale?
-- Audio project with Mango
-    - Should we use words in the interface, or will unlabelled colours do?
-
-\section{Look up}
-Qualitative Quantitative
-Interviews     Automated Data Collection
-Focus Groups - Physiological Data
-Diaries - Eye Tracking
-Camera Study-  Task Analysis
-Surveys - A/B testing
-Heuristic Evaluation - Bench Marking
-Cognitive Walkthroughs - Surveys
-Ethnographic Field Study - Click Stream Analysis
-Think Aloud Protocol - System Usability Scale (SUS)
-
+%\section{Look up}
+%Qualitative                Quantitative
+%Interviews                 Automated Data Collection
+%Focus Groups -             Physiological Data
+%Diaries -                  Eye Tracking
+%Camera Study-              Task Analysis
+%Surveys -                  A/B testing
+%Heuristic Evaluation -     Bench Marking
+% Cognitive Walkthroughs -   Surveys
+% Ethnographic Field Study - Click Stream Analysis
+% Think Aloud Protocol -     System Usability Scale (SUS)
 
 \section{Proposal}
-Interface design faces many usability challenges. The importance of each design factor, such as ease of use and aesthetics, may depend on the project in question. When testing the efficacy of an interface, one would be wise to tailor the research to this. I anticipate mine to be focused on my 3D modelling project, Genesis. Its user interface is designed to optimise the following elements:
+This journal addresses the research techniques to be used in the assessment of the user interface for the 3D modelling program \textit{Genesis}. This research of the various usability testing methodologies will inform which one could be used to test the interface's efficiency in various domains, including:
 
 \begin{itemize}
 	\item The time it takes for a user to find an item or feature of interest
 	\item How quickly a user may find an unfamiliar or advanced feature
-	\item How cluttered or confusing the interface may be
-	\item The aesthetic of the interface
+	\item Whether any confusion is encountered whilst looking for a feature
+	\item Whether it is intuitive based on a 3D modeller's expectations
+	\item Whether there are any significant errors encountered
+	\item Whether the user is aware of how to handle such errors
 \end{itemize}
 
-Some of these elements may be easy to measure quantitatively. Others may lend themselves to qualitative questionnaires, or A/B variants to test efficiency. An advantage to this project is that the source code is readily available, such that multiple versions of the interface may be tested and compared.
+Some of these elements may be easy to measure quantitatively. Others may lend themselves to qualitative questionnaires, or A/B variants to test efficiency. However, while the source code of the application is freely available, it is unlikely that the changes could be actioned during the testing phase due to a lack of resources and time.
 
-\section{Potential user testing methods}
+\section{User testing methods}
 \subsection{Eye tracking}
-Eye tracking involves non-invasively monitoring a user's eye movement to broadly determine their focus of attention. \cite{poole_eye_2006} It traditionally uses a costly specialised camera, making the method less accessible outside of lab scenarios \cite{devicecomparison}, thereby restricting the demographic range of subjects. However, recent developments \cite{lowcosttracker} \cite{ho_low_2014} have managed to achieve similar effects with low-cost portable IR cameras. Additional developments in the field of VR suggest that eye-tracking may be a widely accessible strategy in the near future.
+Eye tracking involves monitoring a user's eye movement to broadly determine their focus of attention. \cite{poole_eye_2006} It traditionally uses a costly specialised camera, making the method less accessible outside of lab scenarios \cite{devicecomparison}, thereby restricting the demographic range of subjects. However, recent developments \cite{lowcosttracker} \cite{ho_low_2014} have managed to achieve similar effects with low-cost portable IR cameras. Additional developments in the field of VR suggest that eye-tracking may be a widely accessible strategy in the near future.
 
-In HCI analysis, eye tracking takes advantage of the theory that eye movement and fixation directly correlates to the user's interest. \cite{poole_eye_2006} Specialised tools can then record and visualise the user's area of focus in a heat map which provides a visualisation immediately depicting areas of interest. However, this is unlikely to be useful alone, and a more detail recording of the path of a user's eye focus may be more substantial \cite{gazepatterns}.
+In HCI analysis, eye tracking takes advantage of the theory that eye movement and fixation directly correlates to the user's interest. \cite{poole_eye_2006} Specialised tools can then record and visualise the user's area of focus in a heat map which provides a visualisation immediately depicting areas of interest. However, this is unlikely to be useful alone, and a more detailed recording of the path of a user's eye focus may be more substantial \cite{gazepatterns}.
 
-While eye tracking is an exciting prospect, is unlikely to be affordable and achievable in the limited time I have, due to the requirement of (perhaps expensive) technologies that are still in a development and research phase.
+\subsection{Focus groups}
 
-\subsection{A/B testing}
-TO READ: \cite{abintro}
 
-A/B testing is historically interesting in the fact that the subjects of an A/B test are not necessarily aware.
-
-A/B testing is useful in that it can help identify the actual efficacy of a design with minimal bias. However, it can still be influenced by the choice of demographics for each group. Furthermore, the sample size required to identify a trend (and therefore a preferred strategy) is quite large, and after the fact, A/B testing does not necessarily offer a solution for further improvement of the trend.
-
-\subsection{Click stream testing}
-Click stream testing involves the tracing of a user's clicking habits. This is especially useful in web development , where a 'three second rule' exists amongst designers, stating `never expect a user to spend more than three seconds on a web page'. This rule highlights the importance of giving the user a path to their destination page quickly. By tracking the path of links clicked by the user, click stream analysis can show to a web developer both which pages the user was most interested in, and how long it took them to get there. They could then optimise the design so the user may reach the page more quickly.
-
-Click stream analysis is unlikely to be especially useful in games, except where they have an extensive menu system.
-
-\section{Surveys, interviews and bias}
+\subsection{Surveys, interviews and bias}
 For a designer to get specific answers to their questions about their design approaches - such as how effectively it works - they may be tempted to ask the users directly. \textbf{Interviewing} and \textbf{surveying} are two methods of data collection wherein a user is asked a specific set of questions about their experience on a topic.
 
 This method, however, is strongly impacted by bias. Several sources of bias, such as: the demographic difference between a voluntary respondent and a non-respondent; motivational influence of the interviewer; language and cultural differences; social desirability bias (especially on sensitive topics \cite{sensitivequestions}); and even the order of questions \cite{questionnairebias}. Many of these issues are shared across surveys, interviews and computers \cite{moresurveybias} \cite{questionnairebias}.
 
-Surveys are closely similar to interviews in terms of the specific questions that can be addressed. Fortunately, in an ironic celebration of human-computer interfacing, computer surveys are known to be more preferred by users, faster to complete, and significantly more effective at delivering fully completed responses in general. \cite{computersurveys} They do, however, suffer from many of the same biases.(cite?)
+Surveys are closely similar to interviews in terms of the specific questions that can be addressed. Fortunately, in an ironic celebration of human-computer interfacing, computer surveys are known to be more preferred by users, faster to complete, and significantly more effective at delivering fully completed responses in general \cite{computersurveys}. They do, however, suffer from many of the same biases.(cite?)
 
 Although these methods have advantages in the collection of qualitative data, an analysis of human-computer-interaction may well benefit more from automated data collection software. This is leveraged by the fact that an HCI evaluation will already involve a computer, making it efficiently non-invasive.
 
-\section{Method comparison}
+\subsection{Think Aloud Protocol}
+The Think Aloud Protocol is not necessarily an independent testing process. It is a protocol wherein a user, or perhaps expert, explains their thought process aloud. This provides a specific benefit of understanding a user's thought process \cite{haak_exploring_2003}. It may allow users to express any frustration that is otherwise not indicated. This enables a designer or assessor to understand the habits of the user and challenges they are likely to face.
 
-\section{Method choices and why}
+It is believed that thought processes can occur much faster than speech \cite{e._fonteyn_description_1993}, making an exhaustive evaluation of thoughts impossible through this method alone. However, the addition of a more automated method, such as eye tracking, coupled with additional recording and observations may produce a clearer picture. This suffers from the same issue of collating data, 
 
-\section{Quality of experience -- Priorities}
-Based on the above findings, a preliminary priority list of asset downloads is proposed:
+\section{Method choice comparison}
 
-\begin{itemize}
-	\item Player movement, to enable initial player autonomy and feedback \cite{motivation}
-	\item Player avatar, so they can see where they are, enhancing the above
-	\item Untextured level geometry (nearby), so the player has locations to visit
-	\item Interactive objects, for further feedback
-	\item Player animations and object animations to deliver the aesthetic \cite{graphicsvsexperience}
-	\item Untextured level geometry (distant, low-detail) for greater immersion
-	\item Textures and sounds to further enhance and complete the aesthetic
-	\item Additional resources.
-\end{itemize}
+\section{Conclusions}
+
 
 \subsection{Server system}
 %\begin{figure}[H]
@@ -131,9 +104,6 @@ Based on the above findings, a preliminary priority list of asset downloads is p
 %	\caption{Partial class diagram illustrating the potential map streaming server},
 %	\label{fig:serversystem}
 %\end{figure}
-
-\section{Conclusion}
-a new demand for games with buildling elements. Should this happen, their development should hope to drive this area of research forward.
 
 \bibliography{bibliography} 
 \bibliographystyle{ieeetr}
