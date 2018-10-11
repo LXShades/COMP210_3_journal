@@ -3,7 +3,7 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[none]{hyphenat}
 \usepackage{setspace}
-\doublespace
+%\doublespace
 
 \usepackage{graphicx}
 \usepackage{float}
@@ -55,8 +55,15 @@
 % Ethnographic Field Study - Click Stream Analysis
 % Think Aloud Protocol -     System Usability Scale (SUS)
 
+%Breadth of Reading - 5% - 6/12/18/24/30
+%Depth of Insight - 15% - Extensive insight is demonstrated. Discussion is critical in nature, and attempts to draw attention to key aspects of the academic discourse
+%Specificity, Verifiability & Accuracy of Claims - 5% - All claims have a clear source of evidence. No errors and/or misinterpretations.
+%Community Engagement - 10% - An extensive number of contributions have been made to the wiki. Contributions are well-reasoned and academically sound. The student has played a key role in driving the community discourse.
+%Appropriateness of Spelling & Grammar - 5%
+%Appropriateness of Journal Structure - 5% - There is considerable structure, leveraged to effectively highlight the argument and key takeaway points. All sentences and paragraphs are well constructed.
+
 \section{Proposal}
-This journal addresses the research techniques to be used in the assessment of the user interface for the 3D modelling program \textit{Genesis}. This research of the various usability testing methodologies will inform which one could be used to test the interface's efficiency in various domains, including:
+This journal discusses potential research techniques to be used in the assessment of the UI for the 3D modelling program \textit{Genesis}. This research of the various usability testing methodologies will inform which one could be used to test the interface's efficiency in various domains, which include:
 
 \begin{itemize}
 	\item The time it takes for a user to find an item or feature of interest
@@ -67,43 +74,53 @@ This journal addresses the research techniques to be used in the assessment of t
 	\item Whether the user is aware of how to handle such errors
 \end{itemize}
 
-Some of these elements may be easy to measure quantitatively. Others may lend themselves to qualitative questionnaires, or A/B variants to test efficiency. However, while the source code of the application is freely available, it is unlikely that the changes could be actioned during the testing phase due to a lack of resources and time.
+Some of these elements, such as those involving time or errors, may prove easy to measure quantitatively. Others may lend themselves to qualitative interviews or questionnaires. This journal assumes a small group of expert and non-expert subjects, with or without 3D modelling experience, from Falmouth University will be available for the evaluation process.
 
-\section{User testing methods}
-\subsection{Eye tracking}
-Eye tracking involves monitoring a user's eye movement to broadly determine their focus of attention. \cite{poole_eye_2006} It traditionally uses a costly specialised camera, making the method less accessible outside of lab scenarios \cite{devicecomparison}, thereby restricting the demographic range of subjects. However, recent developments \cite{lowcosttracker} \cite{ho_low_2014} have managed to achieve similar effects with low-cost portable IR cameras. Additional developments in the field of VR suggest that eye-tracking may be a widely accessible strategy in the near future.
+\section{User testing methods - Ideal vs Achievable}
+\subsection{Ideal: Eye tracking}
+Eye tracking involves monitoring a user's eye movement to determine their focus of attention \cite{poole_eye_2006}. It traditionally uses a costly specialised camera, making the method fairly inaccessible outside of lab scenarios \cite{ho_low_2014}, thereby arguably limiting the demographic range of subjects. However, recent developments have achieved comparable effects with low-cost portable IR cameras, using Infrared Pupil-Corneal Reflection Tracking \cite{majaranta_chapter_2014} \cite{lowcosttracker}, for which open-source software \cite{ho_low_2014} is freely available. This could potentially boost the accessibility of this technique in the near future.
 
-In HCI analysis, eye tracking takes advantage of the theory that eye movement and fixation directly correlates to the user's interest. \cite{poole_eye_2006} Specialised tools can then record and visualise the user's area of focus in a heat map which provides a visualisation immediately depicting areas of interest. However, this is unlikely to be useful alone, and a more detailed recording of the path of a user's eye focus may be more substantial \cite{gazepatterns}.
+Eye tracking takes advantage of the theory that eye movement and fixation directly correlates to the user's interest \cite{poole_eye_2006}. Specialised tools can record and visualise the user's area of focus in a heat map, which provides a broad visualisation immediately depicting the user's areas of interest. However, this is unlikely to be useful as a testing tool alone, as it fails to illustrate the steps of the thinking process so much as it highlights the most attractive areas of the screen \cite{gazepatterns}. The latter may be useful when evaluating the \textit{aesthetic} of a UI, but in a 3D modelling application where productivity is prioritised, a more detailed recording of the path of a user's eye focus could deliver give greater insight into the user's thought process (cite?), and the delays or obstacles encountered.
 
-\subsection{Focus groups}
+Unfortunately, affordability is an obstacle to this technique(Cite). Noting a lack of funding, the \textit{Genesis} UX testing process is thus unlikely to apply it at this time. However, the current development of technologies such as the Microsoft Hololens, could drive eye tracking technology by virtue of its applicability to the AR domain \cite{majaranta_chapter_2014}, enough so that it is worth monitoring as a potential research method in the future.
 
+\subsection{Achievable: Thinking Aloud}
+A concurrent Think Aloud Protocol (CTA \cite{cooke_assessing_2010}) could facilitate a deeper understanding of a user's experience. This protocol has users outwardly declare their intentions and experiences during application use \cite{haak_exploring_2003} \cite{cooke_assessing_2010}. It is commonly used in UX testing groups \cite{mcdonald_exploring_2012}, as it allows observers to gain a self-administered overview of a user's thoughts and feelings when using the system. The feedback from the user, asides from providing useful qualitative data [cite?], could possibly provide timestamps to measure the difficulty of each specific task.
 
-\subsection{Surveys, interviews and bias}
-For a designer to get specific answers to their questions about their design approaches - such as how effectively it works - they may be tempted to ask the users directly. \textbf{Interviewing} and \textbf{surveying} are two methods of data collection wherein a user is asked a specific set of questions about their experience on a topic.
+However, the Think Aloud Protocol is non-exhaustive, as the thought process is known to run faster than speech \cite{e._fonteyn_description_1993} and some unconscious processes could be overlooked \cite{cooke_assessing_2010}.
 
-This method, however, is strongly impacted by bias. Several sources of bias, such as: the demographic difference between a voluntary respondent and a non-respondent; motivational influence of the interviewer; language and cultural differences; social desirability bias (especially on sensitive topics \cite{sensitivequestions}); and even the order of questions \cite{questionnairebias}. Many of these issues are shared across surveys, interviews and computers \cite{moresurveybias} \cite{questionnairebias}.
+In fact, the actions of the user may change when they are encouraged to speak of their process: A 1987 study \cite{metcalfe_intuition_1987} noted that deeper insight, in this case created during the process of thinking aloud, can negatively influence a person's perception of progress whilst increasing their expectations of their own performance. This could influence patience levels and frustration.
 
-Surveys are closely similar to interviews in terms of the specific questions that can be addressed. Fortunately, in an ironic celebration of human-computer interfacing, computer surveys are known to be more preferred by users, faster to complete, and significantly more effective at delivering fully completed responses in general \cite{computersurveys}. They do, however, suffer from many of the same biases.(cite?)
+\subsection{Achievable: Surveys, interviews and bias}
+For a designer to get specific answers to their questions about their design approaches - such as how effectively it works - they may be tempted to ask the users directly. \textbf{Interviewing} and \textbf{surveying} are two methods of data collection wherein a user is asked a specific set of questions about their experience on a topic. (CITE THIS!)
 
-Although these methods have advantages in the collection of qualitative data, an analysis of human-computer-interaction may well benefit more from automated data collection software. This is leveraged by the fact that an HCI evaluation will already involve a computer, making it efficiently non-invasive.
+\subsubsection{Interviews}
+Interview are direct (usually face-to-face) interactions between the end user and an interviewer (cite).
 
-\subsection{Think Aloud Protocol}
-The Think Aloud Protocol is not necessarily an independent testing process. It is a protocol wherein a user, or perhaps expert, explains their thought process aloud. This provides a specific benefit of understanding a user's thought process \cite{haak_exploring_2003}. It may allow users to express any frustration that is otherwise not indicated. This enables a designer or assessor to understand the habits of the user and challenges they are likely to face.
+Oner particular interviewing method, the self-confrontation interview method, is believed by some to be of particularly high effectiveness when teasing out details of the user's mental activity \cite{bach_combining_2011} \cite{lim_self-confrontation_2002}. The method involves requesting that the user perform a set of tasks, recording them in video, and then asking them to view the video \cite{cranach_analysis_1982}. The interviewer can, during this process, pause the video and ask the user about their own thoughts and feelings at the time \cite{lim_self-confrontation_2002}.
 
-It is believed that thought processes can occur much faster than speech \cite{e._fonteyn_description_1993}, making an exhaustive evaluation of thoughts impossible through this method alone. However, the addition of a more automated method, such as eye tracking, coupled with additional recording and observations may produce a clearer picture. This suffers from the same issue of collating data, 
+When compared to traditionally structured interviews, wherein the set of questions is specifically decided by the interviewer \cite{wilson_interview_2013}, this technique has an advantageous ability of aiding user recall \cite{lim_self-confrontation_2002}. The presence of a video could also reduce recall bias. (CITE????????)
 
-\section{Method choice comparison}
+\subsubsection{Questionnaires}
+Questionnaires are closely similar to interviews in terms of the specific questions that can be addressed. However, they involve no direct interaction with another person. They can be conducted in writing or through a computer system
 
-\section{Conclusions}
+Beneficially to an IT-centred department, computerised surveys are noted to be preferable among users compared to paper surveys \cite{computersurveys}, and believed to have a higher completion rate (additional citation). They also do not require transcription to computer. This could be advantageous in a UX testing scenario as it may streamline the testing and questioning process.
 
+Questionnaires are easy to distribute and conduct (cite), but they suffer from the disadvantages of a structured interview, particularly in the area of unexpected system faults. A 2011 study of university students \cite{bach_combining_2011} highlights with particular emphasis the importance of self-reported experiences by the users, and suggests questionnaires could be inadequate for collecting data on a user's challenges--perhaps especially so when working with the complex interface of a 3D modeller.
 
-\subsection{Server system}
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=1.0\linewidth]{Server_Side_Streamer.png}
-%	\caption{Partial class diagram illustrating the potential map streaming server},
-%	\label{fig:serversystem}
-%\end{figure}
+\subsection{Additional considerations}
+Both interviews and questionnaires are often impacted by bias, including: the demographic differences between respondents and non-respondents; motivational influence of the interviewer; language and cultural differences; social desirability bias (especially on sensitive topics \cite{sensitivequestions}); and even the order of questions \cite{questionnairebias}. CITE WHERE \cite{moresurveybias}
+
+However, the specificity of answers in questionnaires makes them a useful vector for quantitative research. [CITE]
+
+\section{Conclusions in applicability to Genesis testing}
+Eye tracking, while on the radar for future consideration, is expected not to be achievable due to the hardware (either specialised or webcam-based) required \cite{poole_eye_2006} \cite{majaranta_chapter_2014} \cite{lowcosttracker}.
+
+The Think Aloud Protocol, while useful in describing user experiences, suffers from the unintended influence of the user's actions and potential slowing of their thought process \cite{e._fonteyn_description_1993} \cite{metcalfe_intuition_1987}. Self-confrontation interviews could circumvent this issue: similar to questionnaires and structured interviews, they facilitate retroactive introspection of their thought process, with a video available to aid recall \cite{cranach_analysis_1982} \cite{lim_self-confrontation_2002}. These advantages make a compelling choice of methodology.
+
+However, qualitative research such as the above is difficult to quantify (cite). Based on the above findings, questionnaires would be a cheaper and more time-constrained option, especially a computer questionnaire as they do not need transcribing and are often preferred by users \cite{computersurveys}.
+
+Perhaps an ideal approach would, with inspiration from \cite{bach_combining_2011}, combine two methods so that one could tease out the biases of the other. A modified version of the self-confrontation interview could subjectively measure confusion and intuitiveness, with respect to particular parts of the interface; whilst the benchmarking of time taken between tasks could provide useful data on the time efficiency of the interface.
 
 \bibliography{bibliography} 
 \bibliographystyle{ieeetr}
